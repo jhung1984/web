@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+</head>
+<meta name="viewpoint" content="width=device-width initial-scale=1 shrink-to-fit=yes">
+<link rel="stylesheet" href="bootstrap.css">
+<script src="jq.js"></script>
+<script src="popper.js"></script>
+<script src="bootstrap.js"></script>
+<body>
+	<div class="container">
+     <article>
+     	<h2>表单布局</h3>
+           <p>Bootstrap表单布局：</p>
+           <ul>
+           	<li class="text-primary">垂直表单（默认）</li>
+           	<li class="text-success">内联表单</li>
+           	<li class="text-danger">水平表单</li>
+           </ul>
+           <h3>垂直或基本表单</h3>
+           <p>基本的表单结构是Bootstrap自带的，个别的表单控件自动接收全局样式。步骤：</p>
+           <ul>
+           	<li>向父<code>&lt;form&gt;</code>元素添加role="form"</li>
+           	<li>把标签和控件繁杂一个带有class.form-group的<code>&lt;div&gt;</code>中。这是获取最佳间距所必需的。</li>
+           	<li>向所有的文本元素<code>&lt;input&gt;</code>、<code>&lt;textarea&gt;</code>和<code>&lt;select&gt;</code>添加class="form-control"</li>
+           </ul>
+          <h3>堆叠表单实例:</h3>
+          <form role="form">
+          	<div class="form-group">
+          		<label for="name">名称</label>
+          		<input type="text" class="form-control" id="name" placeholder="请输入名称">
+          	</div> <!-- form-group结束标签 -->
+            	<div class="form-group">
+            		<label for="email">Email:</label>
+            		<input type="text" class="form-control" id="email" placeholder="请输入email">
+            	</div>
+            	<div class="form-group">
+            		<label for="pwd">Password:</label>
+            		<input type="text" class="formcontrol" id="pwd" placeholder="请输入密码">
+            	</div>
+            	<div class="form-check">
+            		<label class="form-check-label">
+            			<input type="checkbox" class="form-check-input">Remember me
+            		</label>
+            	</div>
+            	<button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <h3>内联表单</h3>
+          <form action="" class="form-inline"></form>
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email">
+          <label for="pwd">
+          	<input type="password" class="form-control" id="pwd" placeholder="Enter your password">
+          	<div class="form-check">
+          		<label for="form-check-label">
+          			<input type="checkbox" class="form-check-label">Remember me
+          		</label>
+          	</div>
+          	<button class="btn btn-primary" type="submit">Submit</button>
+          </label>
+          <tabel class="tabel">
+          	<th>
+          		<tr>序号</tr>
+          		<tr>名称</tr>
+          		<tr>描述</tr>
+          	</th>
+          	<tr>
+          		<td>1</td>
+          		<td>堆叠表单</td>
+          		<td>.form-group</td>
+          	</tr>
+          	<tr>
+          		<td>2</td>
+          		<td>内联表单</td>
+          		<td>.form-inline</td>
+          	</tr>
+          </tabel>
+          <h3>表单标签的使用</h3>
+          <ul>
+          	<li>首先为<code>div</code>添加class(.formgroup"堆叠表单"垂直方向)或.forminline"内联表单"水平方向</li>
+          	<li>随后创建<code>label</code>标签并赋值属性</li>
+          	<li>添加<code>input</code>标签，赋值class"form-control",赋值id(id为label属性)</li>
+          </ul>
+          <h2>表单控件</h3>
+          <p>Bottstrap支持以下表单控件：</p>
+          <ul>
+          	<li>input</li>
+          	<li>textarea</li>
+          	<li>checkbox（复选框）</li>
+          	<li>radio</li>
+          	<li>select</li>
+          </ul>
+          <h3>一、Bootstrap Input</h3>
+          <p>Bootstrap支持所有HTML5输入类型：text,password,datetime,datetime-local,date,month,time,week,number,email,url,search,tel,color</p>
+          	<p class="text-danger"><b>注意：</b>如果input的type属性未经正确生命，输入框的样式将不会显示。</p>
+          	<h3>Bootstrap textarea</h3>
+          	<p>textarea 实例：</p>
+          	<div class="form-group">
+          		<label for="comment">评论：</label>
+          		<textarea id="comment" cols="30" rows="10" class="form-control"></textarea>
+          		<button class="btn btn-primary" type="submit">提交</button>
+          	</div>
+          	<h3>二、Bootstrap 复选框（checkbox）与单选框（Radio）</h3>
+          	<p>复选框实例：</p>
+          	<p>以下哪个数字比1大？</p>
+          	<form class="form-group">
+          		<label class="form-check-label form-check-inline">
+          			<input type="checkbox" class="form-check-input" value="1">1
+          		</label>
+
+          		<label class="form-check-label form-check-inline">
+          			<input type="checkbox" class="form-check-input" value="2">2
+          		</label>>
+
+          		<label class="form-check-label form-check-inline">
+          				<input type="checkbox" class="form-check-input" value="3">3
+          		</label>
+          	</form>
+          </br>
+          	<button type="submit" class="btn btn-primary">提交</button>
+          	<p text-warning>PS: .form-check-inline 类可以让选项显示在同一行</p>
+          	<p>单选框实例：</p>
+          	<p>单选题</p>
+          	<form>
+          		<label for="" class="radio-inline"><input type="radio" name="optradio">option 1</label>
+          		<label for="" class="radio-inline"><input type="radio" name="optradio">option 2</label>
+          		<label for="" class="radio-inline"><input type="radio" name="optradio">option 3</label>
+          	</form>
+          	<h3><code>select</code>标签创建下拉菜单</h3>
+          	<p>实例：</p>
+          	<form action="">
+          		<label for="select1">当选下拉菜单：</label>
+          		<select name="" id="select1" class="form-control">
+          			<option value="">1</option>
+          			<option value="">2</option>
+          			<option value="">3</option>
+          			<option value="">4</option>
+          		</select>
+          	</br>
+          	<label for="select2">多选下拉菜单（通过<kbd>shift</kbd>以及<kbd>ctrol</kbd>进行选择）</label>
+          	<select multiple="" class="form-control" id="select2">
+          	<option value="1">1</option>
+          	<option value="2">2</option>
+          	<option value="3">3</option>
+          	<option value="4">4</option>
+          	</select>
+          	</form>
+
+
+     </article>
+ </div><!-- .container结束标签 -->
+</body>
+</html>

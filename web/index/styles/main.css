@@ -1,0 +1,88 @@
+html,body,a,ul,li,div,span,a,img{
+		margin:0;
+		padding: 0;
+	}
+html{
+		font-family: sans-serif 微软雅黑;
+	}
+ul,li,a{
+		text-decoration: none;
+		list-style: none;
+	}
+.logo{
+		margin:0 auto;
+		width: 10rpx;
+		height: 4rem;
+		text-align: center;
+		text-shadow: 0.2rem 0.1rem 0.1rem #736262;
+		font-size: 4rem;
+		color: #000000;
+	}
+	.nav_content{
+		background-color: #736262;
+		margin:1rem auto;
+		width: 38rem;
+		height: 2rem;
+		border-radius: 1rem;
+	}
+	.nav_content .nav_item{
+		float: left;
+		padding-right: 0.5rem;
+	}
+	.link{
+		padding-left: 0.5rem;
+		font-size: 1.5rem;
+		color: #000000;
+	}
+	.nav_left{
+		display: inline-table;
+		margin-left: 1rem;
+		width: 5rem;
+		height: 20rem;
+
+	}
+	.nav_left .nav_left_content{
+        margin-top: 40px;
+        background-color: #736262;
+		border-radius: 1rem;
+
+	}
+	.nav_left .nav_left_content .nav_left_item{
+		color: #000000;
+		font-size: 1rem;
+		padding-bottom: 1rem;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+    .dropdown{
+		position: absolute;
+		width: 8rem;
+		height: 16rem;
+		margin-left: 7rem;
+		margin-top: -2.5rem;
+		background-color: #736262;
+		border-radius: 1rem;
+		display: none;
+	}
+	.nav_left .nav_left_content:hover .dropdown {
+		display: block;
+	}
+	.dropdown .dropdown_item{
+		position: relative;
+		width: 8rem;
+		height: 2rem;
+		margin-left: 1rem;
+		margin-top: 1rem;
+		background-color: #736262;
+		border-radius: 0.5rem;
+        text-align: center;
+        line-height: 2rem;
+        font-size: 1rem;
+	}
+	.bg_color{
+		width: auto;
+		height: 1080px;
+		background-image: url(/web/index/images/bg_1920x1080.jpg);
+		z-index: -1;
+	}
