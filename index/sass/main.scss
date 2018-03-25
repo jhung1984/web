@@ -1,0 +1,224 @@
+@charset "utf-8";
+//SCSS中混合宏的使用
+@mixin mt($var) {
+    margin-top: $var;
+}
+
+.block {
+    @include mt(5px);
+
+    span {
+display: block;
+    @include mt(5px);
+    }
+}
+
+.header {
+    color:orange;
+    @include mt(5px);
+
+    span {
+        display:block;
+        @include mt(5px);
+    }
+}
+
+//scss继承的运用
+.mt {
+    margin-top: 5px;
+}
+
+.block {
+    @extend .mt;
+    span {
+        display: block;
+        @extend .mt;
+    }
+}
+
+//scss中占位符的使用
+%mt {
+margin-top: 5px;
+    }
+.block {
+    @extend %mt;
+    span {
+        display: block;
+        @extend %mt;
+    }
+}
+
+.header {
+    color:orange;
+    @extend %mt;
+
+    span {
+        display: block;
+        @extend %mt;
+    }
+}
+
+$properties:(margin,padding);
+@mixin set-value($side,$value) {
+    @each $prop in $properties {
+        #{$prop}-#{$side}:$value;
+    }
+}
+.login-box {
+    @include set-value(top,14px);
+}
+
+@mixin blockOrHidden($boolean:true) {
+    @if $boolean{
+        @debug "$boolean is #{$boolean}";
+        display:block;
+    }
+    @else {
+        @debug "$boolean is #{$boolean}";
+        display:none;
+    }
+}
+
+.block {
+    @include blockOrHidden;
+}
+
+.hidden {
+    @include blockOrHidden(false);
+}
+
+//through
+$grid-prefix: span !default;
+$grid-width: 60px !default;
+$grid-gutter: 20px !default;
+
+%grid {
+    float: left;
+    margin-left: $grid-gutter / 2;
+    margin-right:  $grid-gutter / 2;
+    border: 1px solid #c3c3c3;
+    background: #f40;
+}
+@for $i from 1 through 12 {
+    .#{grid-prefix}-#{$i} {
+        width: $grid-width * $i + $grid-gutter * ($i - 1);
+        @extend %grid;
+}
+}
+
+$types:4;
+$type-width: 20px;
+
+@while $types < 15 {
+    .while-#{$types} {
+        width: $type-width + $types;
+    }
+    $types: $types + 1;
+}
+
+$list: adam john wynn mason kuroir;
+
+@mixin author-images {
+    @each $author in $list {
+        .photo-#{$author} {
+            background: url("/images/avatars/#{$author}.png") no-repeat;
+        }
+    }
+}
+
+.author-bio {
+    @include author-images;
+}
+
+.test1 {
+    content: unquote('Hello Sass!');
+}
+.test2 {
+    content: unquote("I'm Web Designer");
+}
+//percentage($value)
+//round($value)
+//ceil($value)
+//floor($value)
+//abs($value)
+//min($numbers...)
+//max($numbers...)
+//random()
+
+.footer {
+    width: percentage(5px / 10px)
+}
+.footer1 {
+    width:round(15.5px);
+}
+.footer2 {
+    width: ceil(13.5px);
+}
+.footer3 {
+    width: floor(12.3px);
+}
+.footer4 {
+    width: abs(-123.4px);
+}
+.footer5 {
+    width: min(12.5px,15.3px);
+    height: max(14.3px,15.6px);
+}
+
+//length($list)
+//nth($list,$n)
+//join($list1,$list2,[$separator])
+//append($list1,$vale,[$separator])
+//zip($list...);
+//index($list,$value)
+//
+//type-of($value)
+//unit($number)
+//unitless($number)
+//comparable($number-1,$number-2)
+
+$social-colors: (
+    dribble:#ea4c89,
+    facebook: #3b5998,
+    github: #171515,
+    google: #db4437,
+    twitter: #55acee
+);
+.btn-dribble {
+    color: map-get($social-colors,facebook);
+}
+
+@function colors($color) {
+    @if not map-has-key($social-colors,$color) {
+        @warn "No color found for '#{$color}' in $social-colors map.Property omitted.";
+    }
+    @return map-get($social-colors,$color);
+}
+.btn-dribble {
+  color:colors(dribble);
+}
+
+$social-colors: (
+    dribble: #ea4c89,
+    facebook: #3b5998,
+    github: #171515,
+    google: #db4437,
+    twitter: #55acee
+    );
+
+    @function colors($color) {
+        $names: map-keys($social-colors);
+        @if not index($names,$color) {
+            @warn "Warning: '#{$color} is not a valid color name.'";
+        }
+        @return map-get($social-colors,$color);
+    }
+.btn-weibo {
+color:colors(weibo)
+    };
+
+
+
+
+
+

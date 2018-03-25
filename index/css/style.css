@@ -1,0 +1,159 @@
+.block {
+  margin-top: 5px; }
+  .block span {
+    display: block;
+    margin-top: 5px; }
+
+.header {
+  color: orange;
+  margin-top: 5px; }
+  .header span {
+    display: block;
+    margin-top: 5px; }
+
+.mt, .block, .block span {
+  margin-top: 5px; }
+
+.block span {
+  display: block; }
+
+.block, .block span, .header, .header span {
+  margin-top: 5px; }
+
+.block span {
+  display: block; }
+
+.header {
+  color: orange; }
+  .header span {
+    display: block; }
+
+.login-box {
+  margin-top: 14px;
+  padding-top: 14px; }
+
+.block {
+  display: block; }
+
+.hidden {
+  display: none; }
+
+.grid-prefix-1, .grid-prefix-2, .grid-prefix-3, .grid-prefix-4, .grid-prefix-5, .grid-prefix-6, .grid-prefix-7, .grid-prefix-8, .grid-prefix-9, .grid-prefix-10, .grid-prefix-11, .grid-prefix-12 {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #c3c3c3;
+  background: #f40; }
+
+.grid-prefix-1 {
+  width: 60px; }
+
+.grid-prefix-2 {
+  width: 140px; }
+
+.grid-prefix-3 {
+  width: 220px; }
+
+.grid-prefix-4 {
+  width: 300px; }
+
+.grid-prefix-5 {
+  width: 380px; }
+
+.grid-prefix-6 {
+  width: 460px; }
+
+.grid-prefix-7 {
+  width: 540px; }
+
+.grid-prefix-8 {
+  width: 620px; }
+
+.grid-prefix-9 {
+  width: 700px; }
+
+.grid-prefix-10 {
+  width: 780px; }
+
+.grid-prefix-11 {
+  width: 860px; }
+
+.grid-prefix-12 {
+  width: 940px; }
+
+.while-4 {
+  width: 24px; }
+
+.while-5 {
+  width: 25px; }
+
+.while-6 {
+  width: 26px; }
+
+.while-7 {
+  width: 27px; }
+
+.while-8 {
+  width: 28px; }
+
+.while-9 {
+  width: 29px; }
+
+.while-10 {
+  width: 30px; }
+
+.while-11 {
+  width: 31px; }
+
+.while-12 {
+  width: 32px; }
+
+.while-13 {
+  width: 33px; }
+
+.while-14 {
+  width: 34px; }
+
+.author-bio .photo-adam {
+  background: url("/images/avatars/adam.png") no-repeat; }
+.author-bio .photo-john {
+  background: url("/images/avatars/john.png") no-repeat; }
+.author-bio .photo-wynn {
+  background: url("/images/avatars/wynn.png") no-repeat; }
+.author-bio .photo-mason {
+  background: url("/images/avatars/mason.png") no-repeat; }
+.author-bio .photo-kuroir {
+  background: url("/images/avatars/kuroir.png") no-repeat; }
+
+.test1 {
+  content: Hello Sass!; }
+
+.test2 {
+  content: I'm Web Designer; }
+
+.footer {
+  width: 50%; }
+
+.footer1 {
+  width: 16px; }
+
+.footer2 {
+  width: 14px; }
+
+.footer3 {
+  width: 12px; }
+
+.footer4 {
+  width: 123.4px; }
+
+.footer5 {
+  width: 12.5px;
+  height: 15.6px; }
+
+.btn-dribble {
+  color: #3b5998; }
+
+.btn-dribble {
+  color: #ea4c89; }
+
+/*# sourceMappingURL=style.css.map */
