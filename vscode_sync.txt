@@ -1,2 +1,2 @@
 利用vscode插件 setting sync 快捷键:ALT+SHIFT+U 上传配置。到别的电脑下载插件后按：ALT+SHIFT+D 输入key载入配置。
-d49c53ccfe87e2d840486f22238ef07c20e59de9
+e8067f74cd7b99aaf2c2e44ec8adf024d3013b11
